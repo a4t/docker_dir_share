@@ -6,3 +6,5 @@ RUN apt-get install -y curl
 RUN curl -L http://toolbelt.treasuredata.com/sh/install-ubuntu-trusty-td-agent2.sh | sh
 
 COPY run.sh /tmp/
+
+ENTRYPOINT ["/bin/bash", "/tmp/run.sh"]
